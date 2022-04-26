@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: johanneshupfeldazuredevopsgithubacraksapp 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: johanneshupfeldazuredevopsgithubacraksapp
+  template:
+    metadata:
+      labels:
+        app: johanneshupfeldazuredevopsgithubacraksapp 
+    spec:
+      containers:
+        - name: johanneshupfeldazuredevopsgithubacraksapp 
+          image: aksdevopssacr.azurecr.io/johanneshupfeldazuredevopsgithubacraksapp
+          ports:
+          - containerPort: 80
